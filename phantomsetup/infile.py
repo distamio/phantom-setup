@@ -242,7 +242,7 @@ class _InFile:
                 block_dict.pop('Tsnow')
 
         if block == block_label['inject']:
-            block_dict.pop('inject')
+            block_dict.pop('rkill')
         return block_dict
 
     def _make_infile_dictionary(self):
