@@ -27,6 +27,8 @@ COMPILE_OPTIONS = {
     'NONIDEALMHD': False,
     'PERIODIC': False,
     'PHOTO': False,
+    'MORRIS_MONAGHAN': False,
+    'STORE_TEMPERATURE':False,
 }
 
 KERNEL_HFACT = {
@@ -99,6 +101,9 @@ RUN_OPTION_BLOCK_LABEL = {
     'photoevaporation': 'options controlling photoevaporation',
     'sinks': 'options controlling sink particles',
     'viscosity': 'options controlling physical viscosity',
+    'const_av':'options controlling AV',
+    'mm_av':'options controlling MorrisMonaghan AV',
+    'storetemp':'options controlling output temperature'
 }
 
 _RUN_OPTIONS = {
