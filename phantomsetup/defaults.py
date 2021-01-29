@@ -104,7 +104,7 @@ RUN_OPTION_BLOCK_LABEL = {
     'const_av':'options controlling AV',
     'mm_av':'options controlling MorrisMonaghan AV',
     'storetemp':'options controlling output temperature',
-    'inject':'options for injecting/removing particles'
+    'inject':'options for injecting/removing particles',
 }
 
 _RUN_OPTIONS = {
