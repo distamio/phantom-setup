@@ -91,7 +91,6 @@ RUN_OPTION_BLOCK_LABEL = {
     'eos': 'options controlling equation of state',
     'external forces': 'options relating to external forces',
     'hydrodynamics': 'options controlling hydrodynamics, artificial dissipation',
-    'inject': 'options for injecting particles',
     'io': 'options controlling run time and input/output',
     'io supplementary': (
         'options controlling run time and input/output: supplementary features'
@@ -101,10 +100,11 @@ RUN_OPTION_BLOCK_LABEL = {
     'non-ideal MHD': 'options controlling non-ideal MHD',
     'photoevaporation': 'options controlling photoevaporation',
     'sinks': 'options controlling sink particles',
-    'viscosity': 'options controlling physical viscosity',
+    'viscosity': 'options controlling physical viscosity2',
     'const_av':'options controlling AV',
     'mm_av':'options controlling MorrisMonaghan AV',
-    'storetemp':'options controlling output temperature'
+    'storetemp':'options controlling output temperature',
+    'inject':'options for injecting/removing particles'
 }
 
 _RUN_OPTIONS = {
@@ -296,7 +296,7 @@ _RUN_OPTIONS = {
     },
     # ------------------------------------------------
     # options controlling physical viscosity
-    'options controlling physical viscosity': {
+    'options controlling physical viscosity2': {
         'irealvisc': (0, 'physical viscosity type (0=none,1=const,2=Shakura/Sunyaev)'),
         'shearparam': (
             0.1,
@@ -349,7 +349,9 @@ _RUN_OPTIONS = {
     },
     # ------------------------------------------------
     # options for injecting particles
-    # TODO
+    'options for injecting/removing particles': {
+        'rkill': (-1, 'deactivate particles outside this radius (<0 is off)'),
+    }
     # ------------------------------------------------
     # options controlling non-ideal MHD
     # TODO
@@ -410,4 +412,5 @@ HEADER = {
     'ymin': -0.5,
     'zmax': 0.5,
     'zmin': -0.5,
+    'rkill': _RUN_OPTIONS['rkill']
 }

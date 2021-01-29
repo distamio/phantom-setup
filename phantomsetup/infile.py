@@ -128,8 +128,7 @@ class _InFile:
         if self.get_compile_option('PHOTO'):
             blocks_to_add.append(block_label['photoevaporation'])
 
-        if self.get_compile_option('INJECT_PARTICLES'):
-            blocks_to_add.append(block_label['inject'])
+        blocks_to_add.append(block_label['inject'])
 
         if self.get_compile_option('NONIDEALMHD'):
             blocks_to_add.append(block_label['non-ideal MHD'])
@@ -155,10 +154,10 @@ class _InFile:
 
         block_dict = self.run_options.to_dict()[block]
 
-        if block == block_label['accuracy']:
-            if not self.get_compile_option('GRAVITY'):
-                block_dict.pop('tree_accuracy')
 
+        if block == block_label['accuracy']:
+            if self.get_compile_option('GRAVITY'):
+                block_dict.pop('tree_accuracy')
         if block == block_label['hydrodynamics']:
             if self.get_compile_option('ISOTHERMAL'):
                 block_dict.pop('alphau')
@@ -242,6 +241,8 @@ class _InFile:
             if self.get_run_option('isnow') != 2:
                 block_dict.pop('Tsnow')
 
+        if block == block_label['inject']:
+            block_dict.pop('inject')
         return block_dict
 
     def _make_infile_dictionary(self):
