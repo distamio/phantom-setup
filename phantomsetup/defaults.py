@@ -15,7 +15,7 @@ COMPILE_OPTIONS = {
     'DUSTGROWTH': False,
     'GRAVITY': False,
     'H2CHEM': False,
-    'IND_TIMESTEPS': True,
+    'IND_TIMESTEPS': True, 
     'INJECT_PARTICLES': False,
     'ISOTHERMAL': False,
     'KERNEL': 'cubic',
