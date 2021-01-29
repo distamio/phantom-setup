@@ -28,6 +28,7 @@ COMPILE_OPTIONS = {
     'PERIODIC': False,
     'PHOTO': False,
     'MORRIS_MONAGHAN': False,
+    'CONST_AV':False,
     'STORE_TEMPERATURE':False,
 }
 
