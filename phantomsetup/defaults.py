@@ -100,7 +100,7 @@ RUN_OPTION_BLOCK_LABEL = {
     'non-ideal MHD': 'options controlling non-ideal MHD',
     'photoevaporation': 'options controlling photoevaporation',
     'sinks': 'options controlling sink particles',
-    'viscosity': 'options controlling physical viscosity2',
+    'viscosity': 'options controlling physical viscosity3',
     'const_av':'options controlling AV',
     'mm_av':'options controlling MorrisMonaghan AV',
     'storetemp':'options controlling output temperature',
@@ -296,7 +296,7 @@ _RUN_OPTIONS = {
     },
     # ------------------------------------------------
     # options controlling physical viscosity
-    'options controlling physical viscosity2': {
+    'options controlling physical viscosity3': {
         'irealvisc': (0, 'physical viscosity type (0=none,1=const,2=Shakura/Sunyaev)'),
         'shearparam': (
             0.1,
