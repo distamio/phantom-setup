@@ -18,7 +18,7 @@ setup(
     version=version,
     author='Daniel Mentiplay',
     packages=['phantomsetup'],
-    url='http://github.com/distamio/phantom-setup',
+    url='http://github.com/dmentipl/phantom-setup',
     license='MIT',
     description='Phantom setup with Python and HDF5',
     long_description=long_description,
