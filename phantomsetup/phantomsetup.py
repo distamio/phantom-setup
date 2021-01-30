@@ -1004,7 +1004,9 @@ class Setup:
 
         self._header['tolh'] = self.get_run_option('tolh')
         self._header['C_cour'] = self.get_run_option('C_cour')
-        self._header['C_force'] = self.get_run_option('C_force')
+        self._header['C_force']       = self.get_run_option('C_force')
+        self._header['tree_accuracy'] = self.get_run_option('tree_accuracy')
+
 
         # Artificial dissipation
 

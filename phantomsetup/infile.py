@@ -156,7 +156,7 @@ class _InFile:
 
 
         if block == block_label['accuracy']:
-            if self.get_compile_option('GRAVITY'):
+            if not self.get_compile_option('GRAVITY'):
                 block_dict.pop('tree_accuracy')
         if block == block_label['hydrodynamics']:
             if self.get_compile_option('ISOTHERMAL'):
@@ -241,7 +241,7 @@ class _InFile:
             if self.get_run_option('isnow') != 2:
                 block_dict.pop('Tsnow')
 
-        if block == block_label['inject']:
+        #if block == block_label['inject']:
             block_dict.pop('rkill') 
         return block_dict
 
