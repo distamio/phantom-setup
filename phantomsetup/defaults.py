@@ -226,6 +226,7 @@ _RUN_OPTIONS = {
         'X': (0.74, 'hydrogen mass fraction'),
         'Z': (0.02, 'metallicity'),
         'relaxflag': (0, '0=evolve, 1=relaxation on (keep T const)'),
+        'isink': (0, "sink around which to centre temperature profile for ieos=6 (>0)")
     },
     # ------------------------------------------------
     # options controlling cooling
@@ -384,8 +385,8 @@ HEADER = {
     'hfact': _RUN_OPTIONS['hfact'],
     'idust': PARTICLE_TYPE['idust'],
     'ieos': _RUN_OPTIONS['ieos'],
+    'isink': _RUN_OPTIONS['isink'],
     'iexternalforce': _RUN_OPTIONS['iexternalforce'],
-    'isink': 0,
     'majorv': PHANTOM_VERSION.split('.')[0],
     'massoftype': np.zeros(MAXTYPES),
     'microv': PHANTOM_VERSION.split('.')[1],

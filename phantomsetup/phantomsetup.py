@@ -512,7 +512,7 @@ class Setup:
 
         return self
 
-    def set_equation_of_state(self, ieos: int, **kwargs) -> Setup:
+    def set_equation_of_state(self, ieos: int,  **kwargs) -> Setup:
         """Set the equation of state.
 
         Parameters
@@ -539,6 +539,7 @@ class Setup:
             except ValueError:
                 pass
         return self
+
 
     def set_boundary(self, boundary: tuple, periodic: bool = False) -> Setup:
         """Set the boundary as a Cartesian box.
@@ -1038,6 +1039,8 @@ class Setup:
             self._header['gamma'] = self._eos.gamma
         if self._eos.qfacdisc is not None:
             self._header['qfacdisc'] = self._eos.qfacdisc
+        self._header['isink'] = self.get_run_option('isink')
+
 
         # Boundary
 
